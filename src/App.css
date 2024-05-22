@@ -1,31 +1,196 @@
+/* App.css */
+
+:root {
+  --pink: #EC008C;
+  --green: #60BB46;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 .App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.content {
+  padding-top: 100px; /* Add padding to avoid content being hidden under the fixed header */
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.menu-item:hover {
+  color: #ffd700;
+}
+
+.hero {
+  background-image: url('/path-to-your-hero-image.jpg'); /* Add your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.three-columns {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  padding: 50px 20px;
+  margin: 20px 0;
+}
+
+.column {
+  flex-basis: 32%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.column h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.column p {
+  line-height: 1.6;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .three-columns {
+    flex-direction: column;
+  }
+
+  .column {
+    margin: 10px 0;
+  }
+}
+
+/* React Burger Menu styles */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: var(--pink);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  max-height: 100%; /* Ensure the menu can scroll */
+  overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+/* Hide scrollbar for Webkit browsers */
+.bm-item-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.bm-item-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.menu-item--small {
+  display: block;
+  padding: 0.5em;
   color: white;
+  text-decoration: none;
+  transition: color 0.1s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.heart {
-  color: #ff0000;
-}
-
-.small {
-  font-size: 0.75rem;
+.menu-item--small:hover {
+  color: #dfe6e9;
 }
