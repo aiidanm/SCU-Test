@@ -1,8 +1,8 @@
 /* App.css */
 
 :root {
-  --pink: #EC008C;
-  --green: #60BB46;
+  --pink: #ec008c;
+  --green: #60bb46;
 }
 
 body {
@@ -13,15 +13,15 @@ body {
 
 .App {
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
 }
 
 .header {
-  background-color: #333;
+  background-color: var(--pink);
   color: #fff;
   padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
@@ -51,7 +51,7 @@ body {
 }
 
 .hero {
-  background-image: url('/path-to-your-hero-image.jpg'); /* Add your image path */
+  background-image: url("/public/homehero2.jpg"); /* Add your image path */
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -91,6 +91,7 @@ body {
 
 .column p {
   line-height: 1.6;
+  font-size: 2ch
 }
 
 /* Footer styles */
@@ -193,4 +194,37 @@ body {
 
 .menu-item--small:hover {
   color: #dfe6e9;
+}
+
+.scu-button {
+  background-color: var(--pink);
+  color: white;
+  border-radius: 5px;
+  min-height: 20%;
+  min-width: 80%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scu-button:hover {
+  background-color: #fc0097; /* Darker shade of the pink color */
+  transform: scale(1.05); /* Slightly increase the size */
+  cursor: pointer; /* Change cursor to pointer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+
+.Content-block{
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.Content-block h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }
