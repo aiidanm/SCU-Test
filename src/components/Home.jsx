@@ -6,17 +6,17 @@ const Home = () => {
   const columns = [
     {
       heading: "Loan 1",
-      content: "",
+      content: "Description of loan 1",
       buttonText: "Learn More",
     },
     {
-      heading: "Service 2",
-      content: "Description of Service 2...",
+      heading: "Loan 2",
+      content: "Description of loan 2...",
       buttonText: "Learn More",
     },
     {
-      heading: "Service 3",
-      content: "Description of Service 3...",
+      heading: "Loan 3",
+      content: "Description of loan 3...",
       buttonText: "Learn More",
     },
   ];

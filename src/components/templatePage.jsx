@@ -2,6 +2,7 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "../App.css"
+import LoanFlow from "./loanFlow";
 
 const TemplatePage = ({ title, columns }) => {
   return (
@@ -21,14 +22,18 @@ const TemplatePage = ({ title, columns }) => {
           <a className="menu-item--small" href="">
             Settings
           </a>
+          <a className="menu-item--small" href="">
+            Members Area
+          </a>
         </Menu>
+        <button className="membersArea-button">Members Area</button>
       </header>
       <div className="content">
         <div className="hero">
           <h1>{title}</h1>
         </div>
         <div className="Content-block">
-            <h1>Content</h1>
+            <LoanFlow/>
         </div>
         <div className="three-columns">
           {columns.map((column, index) => (
